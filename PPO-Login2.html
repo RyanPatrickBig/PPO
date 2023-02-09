@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+          font-family: Arial;
+          color: white;
+        }
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          top: 0;
+        }
+        .left {
+          left: 0;
+          background-image: linear-gradient(to bottom, hsl(204, 91%, 66%), hsl(204, 70%, 60%));
+          text-align: center;
+        }
+        .right {
+          right: 0;
+          background-image: linear-gradient(to bottom, hsl(250, 7%, 34%), hsl(245, 7%, 30%));
+        }
+        .centered {
+          position: relative;
+          top: 25%;
+          left: 50%;
+          transform: translate(-50%);
+          padding-inline: 100px;
+        }
+        .centered img {
+          width: 150px;
+          border-radius: 50%;
+        }
+        .inputBox{
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .inputUser{
+        background: none;
+        border: none;
+        border-bottom: 1px solid;
+        padding-bottom: 10px;
+        outline: none;
+        font-size: 15px;
+        width: 100%;
+        color: rgb(163, 163, 163);
+    }
+    .inputUser::placeholder{
+        color: rgb(163, 163, 163);
+    }
+    .labelInput{
+        position: absolute;
+        top: -20px;
+        left: 0px;
+        pointer-events: none;
+        transition: .5px;
+        font-size: 80%;
+        color: white;
+    }
+    .inputSubmit{
+        background-color: hsl(204, 70%, 60%);
+        border: none;
+        color: white;
+        padding: 15px 90px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .inputSubmit:hover{
+        background-color: hsl(204, 47%, 49%);
+    }
+        </style>
+<body>
+
+    <div class="split left">
+      <div class="centered">
+        <p style="font-size: 35px;">Juntos, construiremos o <br>Seu Futuro</p>
+      </div>
+    </div>
+    
+    <div class="split right">
+      <div class="centered">
+        <a href="home.php">Voltar a Tela Inicial</a> <br><br><br>
+        <form action="testLogin.php" method="POST">
+            <div class="inputBox">
+                <input type="text" name="email" id="email" class="inputUser" placeholder="Digite seu e-mail" required>
+                <label for="email" class="labelInput">E-MAIL</label>
+            </div> <br>
+            <div class="inputBox">
+                <input type="password" name="senha" id="senha" class="inputUser" placeholder="Digite sua senha" required>
+                <label for="senha" class="labelInput">SENHA</label>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" style="color:gray;">Mantenha conectado</label><br><br>
+            </div>
+        <input class="inputSubmit" type="submit" name="submit" value="Login">
+      </div>
+    </div>
+         
+    </body>
+    </html> 
